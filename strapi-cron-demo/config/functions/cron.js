@@ -18,4 +18,21 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
+
+  '* * * * * *': async () => {
+    console.log("Every second")
+  },
+  '0 0 0 * * *': async () => {
+    console.log("Once at midnight")
+
+    //This may call a hundred other functions that need to be run once a day
+    try{
+      // oneFunction()
+    } catch(err){
+
+    }
+  },
+  '0 0 * * * *': async () => {
+    console.log("once every hour")
+  }
 };
